@@ -3,17 +3,30 @@
 namespace App\Http\Controllers;
 
 use Symfony\Component\HttpFoundation\Request;
-use Illuminate\Routing\Controller as BaseController;
 
-class TwitterController extends BaseController
+class TwitterController extends Controller
 {
+    /**
+     * @var TwitterService
+     */
+    private $twitterService;
+
+    public function __construct(TwitterService $twitterService)
+    {
+        $this->twitterService = $twitterService;
+    }
+
     public function index(Request $request)
     {
         return view('twitter.index');
     }
 
-    public function getReach()
+    public function getReach(Request $request)
     {
+        $url = $request->get('url');
 
+        $reach = $this->twitterService->getReach();
+
+        return view('twitter.index', ['url' => $url]);
     }
 }
