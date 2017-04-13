@@ -177,7 +177,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-        \App\Providers\TwitterOAuthServiceProvider::class,
+        \App\Providers\TwitterServiceProvider::class,
 
         Collective\Html\HtmlServiceProvider::class,
 

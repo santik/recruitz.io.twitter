@@ -10,7 +10,7 @@ use Santik\RecruitzIoTwitter\Infrastructure\ApiTwitterDataResolver;
 use Santik\RecruitzIoTwitter\Infrastructure\FileTwitterReachDatabaseAdapter;
 use Santik\RecruitzIoTwitter\TwitterService;
 
-class TwitterOAuthServiceProvider extends ServiceProvider
+class TwitterServiceProvider extends ServiceProvider
 {
 
     /**
