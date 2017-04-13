@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Santik\RecruitzIoTwitter\Application\TwitterService;
 use Santik\RecruitzIoTwitter\Domain\TweetId;
-use Santik\RecruitzIoTwitter\TwitterService;
 use Symfony\Component\HttpFoundation\Request;
 
 class TwitterController extends Controller

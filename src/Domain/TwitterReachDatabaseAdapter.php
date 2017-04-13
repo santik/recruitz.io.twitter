@@ -1,9 +1,6 @@
 <?php
 
-namespace Santik\RecruitzIoTwitter\Infrastructure;
-
-use Santik\RecruitzIoTwitter\Domain\TweetId;
-use Santik\RecruitzIoTwitter\Domain\TweetReach;
+namespace Santik\RecruitzIoTwitter\Domain;
 
 interface TwitterReachDatabaseAdapter
 {

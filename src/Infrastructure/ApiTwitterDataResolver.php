@@ -5,6 +5,7 @@ namespace Santik\RecruitzIoTwitter\Infrastructure;
 use Abraham\TwitterOAuth\TwitterOAuth;
 use Santik\RecruitzIoTwitter\Domain\TweetId;
 use Santik\RecruitzIoTwitter\Domain\TweetReach;
+use Santik\RecruitzIoTwitter\Domain\TwitterDataResolver;
 
 class ApiTwitterDataResolver implements  TwitterDataResolver
 {

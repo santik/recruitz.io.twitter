@@ -1,12 +1,12 @@
 <?php
 
-namespace Santik\RecruitzIoTwitter;
+namespace Santik\RecruitzIoTwitter\Application;
 
 use Santik\RecruitzIoTwitter\Domain\TweetId;
 use Santik\RecruitzIoTwitter\Domain\TweetReach;
 use Santik\RecruitzIoTwitter\Domain\TweetReachDecider;
-use Santik\RecruitzIoTwitter\Infrastructure\TwitterDataResolver;
-use Santik\RecruitzIoTwitter\Infrastructure\TwitterReachDatabaseAdapter;
+use Santik\RecruitzIoTwitter\Domain\TwitterDataResolver;
+use Santik\RecruitzIoTwitter\Domain\TwitterReachDatabaseAdapter;
 
 class TwitterService
 {
@@ -29,10 +29,10 @@ class TwitterService
 
     public function getReach(TweetId $tweetId): TweetReach
     {
-        $databaseReach = $this->getDatabaseReach($tweetId);
+        $reach = $this->getDatabaseReach($tweetId);
 
-        if (!$this->isTweetReachOutdated($databaseReach)) {
-            return $databaseReach;
+        if (!$this->isTweetReachOutdated($reach)) {
+            return $reach;
         }
 
         $reach = $this->getExternalReach($tweetId);
@@ -40,7 +40,6 @@ class TwitterService
         $this->saveDatabaseReach($reach);
 
         return $reach;
-
     }
 
     private function getExternalReach(TweetId $tweetId): TweetReach
@@ -53,13 +52,13 @@ class TwitterService
         return $this->twitterReachDatabaseAdapter->getReach($tweetId);
     }
 
-    private function isTweetReachOutdated(TweetReach $reach):bool
+    private function isTweetReachOutdated(TweetReach $tweetReach):bool
     {
-        return $this->tweetReachDecider->isOutdated($reach);
+        return $this->tweetReachDecider->isOutdated($tweetReach);
     }
 
-    private function saveDatabaseReach(TweetReach $reach)
+    private function saveDatabaseReach(TweetReach $tweetReach)
     {
-        $this->twitterReachDatabaseAdapter->saveReach($reach);
+        $this->twitterReachDatabaseAdapter->saveReach($tweetReach);
     }
 }

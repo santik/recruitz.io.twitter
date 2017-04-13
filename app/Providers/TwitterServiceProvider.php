@@ -5,10 +5,10 @@ namespace App\Providers;
 use Abraham\TwitterOAuth\TwitterOAuth;
 use Flintstone\Flintstone;
 use Illuminate\Support\ServiceProvider;
+use Santik\RecruitzIoTwitter\Application\TwitterService;
 use Santik\RecruitzIoTwitter\Domain\TweetReachDecider;
 use Santik\RecruitzIoTwitter\Infrastructure\ApiTwitterDataResolver;
 use Santik\RecruitzIoTwitter\Infrastructure\FileTwitterReachDatabaseAdapter;
-use Santik\RecruitzIoTwitter\TwitterService;
 
 class TwitterServiceProvider extends ServiceProvider
 {

@@ -5,6 +5,7 @@ namespace Santik\RecruitzIoTwitter\Infrastructure;
 use Flintstone\Flintstone;
 use Santik\RecruitzIoTwitter\Domain\TweetId;
 use Santik\RecruitzIoTwitter\Domain\TweetReach;
+use Santik\RecruitzIoTwitter\Domain\TwitterReachDatabaseAdapter;
 
 class FileTwitterReachDatabaseAdapter implements TwitterReachDatabaseAdapter
 {
