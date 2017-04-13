@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Santik\RecruitzIoTwitter\TwitterService;
 use Symfony\Component\HttpFoundation\Request;
 
 class TwitterController extends Controller
@@ -18,7 +19,7 @@ class TwitterController extends Controller
 
     public function index(Request $request)
     {
-        return view('twitter.index');
+        return $this->renderView();
     }
 
     public function getReach(Request $request)
@@ -27,6 +28,11 @@ class TwitterController extends Controller
 
         $reach = $this->twitterService->getReach();
 
-        return view('twitter.index', ['url' => $url]);
+        return $this->renderView($url, $reach);
+    }
+
+    private function renderView($url = null, $reach = null)
+    {
+        return view('twitter.index', ['url' => $url, 'reach' => $reach]);
     }
 }
