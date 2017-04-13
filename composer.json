@@ -6,6 +6,8 @@
     "type": "project",
     "require": {
         "php": "^7.0",
+        "abraham/twitteroauth": "^0.7.2",
+        "fire015/flintstone": "^2.0",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "^5.4"

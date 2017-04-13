@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Santik\RecruitzIoTwitter\Domain\TweetId;
 use Santik\RecruitzIoTwitter\TwitterService;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -17,18 +18,25 @@ class TwitterController extends Controller
         $this->twitterService = $twitterService;
     }
 
-    public function index(Request $request)
+    public function index()
     {
         return $this->renderView();
     }
 
     public function getReach(Request $request)
     {
-        $url = $request->get('url');
+        $url = $this->getTweetUrlFromRequest($request);
 
-        $reach = $this->twitterService->getReach();
+        $reach = $this->twitterService->getReach(
+            TweetId::extractFromTweetUrl($url)
+        );
 
         return $this->renderView($url, $reach);
+    }
+
+    private function getTweetUrlFromRequest(Request $request)
+    {
+        return $request->get('url');
     }
 
     private function renderView($url = null, $reach = null)

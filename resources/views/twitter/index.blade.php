@@ -14,7 +14,7 @@
 
     <p>
 
-        {!! $reach ?: '' !!}
+        {!! $reach ?$reach->reach(): '' !!}
     </p>
 </div>
 

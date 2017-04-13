@@ -4,9 +4,63 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2a2b7a586942a5935b68a5483978e0d6",
-    "content-hash": "443fa6b8f394ca67f6b9c6e4243cf60e",
+    "hash": "ab849de90280b291cae60c6004383df5",
+    "content-hash": "e1cb213e832cca7c2f06527ee560e016",
     "packages": [
+        {
+            "name": "abraham/twitteroauth",
+            "version": "0.7.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/abraham/twitteroauth.git",
+                "reference": "119d5a83478a2d21c09cd27980ab67eba11c8fe1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/abraham/twitteroauth/zipball/119d5a83478a2d21c09cd27980ab67eba11c8fe1",
+                "reference": "119d5a83478a2d21c09cd27980ab67eba11c8fe1",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": "^5.6 || ^7.0"
+            },
+            "require-dev": {
+                "phpmd/phpmd": "~2.4",
+                "phpunit/phpunit": "~5.6",
+                "squizlabs/php_codesniffer": "~2.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Abraham\\TwitterOAuth\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Abraham Williams",
+                    "email": "abraham@abrah.am",
+                    "homepage": "https://abrah.am",
+                    "role": "Developer"
+                }
+            ],
+            "description": "The most popular PHP library for use with the Twitter OAuth REST API.",
+            "homepage": "https://twitteroauth.com",
+            "keywords": [
+                "Twitter API",
+                "Twitter oAuth",
+                "api",
+                "oauth",
+                "rest",
+                "social",
+                "twitter"
+            ],
+            "time": "2016-12-12 17:42:13"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
@@ -148,6 +202,53 @@
                 "parser"
             ],
             "time": "2017-03-29 16:04:15"
+        },
+        {
+            "name": "fire015/flintstone",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fire015/flintstone.git",
+                "reference": "60e978df8f547063b627b55492f8ece5a38e2bd0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fire015/flintstone/zipball/60e978df8f547063b627b55492f8ece5a38e2bd0",
+                "reference": "60e978df8f547063b627b55492f8ece5a38e2bd0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Flintstone\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jason M",
+                    "email": "emailfire@gmail.com"
+                }
+            ],
+            "description": "A key/value database store using flat files for PHP",
+            "homepage": "http://www.xeweb.net/flintstone/",
+            "keywords": [
+                "cache",
+                "database",
+                "files",
+                "flintstone",
+                "memory"
+            ],
+            "time": "2016-01-21 09:50:52"
         },
         {
             "name": "jakub-onderka/php-console-color",
