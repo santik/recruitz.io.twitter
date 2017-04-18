@@ -14,6 +14,7 @@ class TweetId
 
     public static function extractFromTweetUrl(string $url) : self
     {
+        //TODO make validation
         $urlParts = explode('/', $url);
         return new self(end($urlParts));
     }

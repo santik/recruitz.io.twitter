@@ -22,6 +22,7 @@ class FileTwitterReachDatabaseAdapter implements TwitterReachDatabaseAdapter
         $data = $this->flintstone->get((string)$tweetId);
         if (!$data) {
             //hack can be improved
+            //throw exception or something like this
             return new TweetReach($tweetId, 0, new \DateTime("-100 years"));
         }
         return new TweetReach($tweetId, $data['count'], new \DateTime($data['datetime']));
