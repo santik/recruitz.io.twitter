@@ -1,4 +1,4 @@
-# recruitz.io.twitter application
+# twitter application
 
 To get dependencies run:
     
